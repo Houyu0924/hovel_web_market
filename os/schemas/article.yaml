@@ -1,0 +1,31 @@
+schema_version: "1.0"
+article:
+  id: ""
+  title: ""
+  slug: ""
+  category: ""
+  article_type: ""
+  status: "idea"
+  target_audience: ""
+  primary_keyword: ""
+  search_intent: ""
+  summary: ""
+  authoring:
+    created_at: ""
+    updated_at: ""
+    owner: ""
+  evidence:
+    sources: []
+    highest_level: ""
+    unverified_claims: []
+  monetization:
+    affiliate_programs: []
+    cta: []
+  links:
+    internal: []
+    external: []
+  review:
+    fact_check: "pending"
+    editor: "pending"
+    human: "pending"
+  next_action: ""

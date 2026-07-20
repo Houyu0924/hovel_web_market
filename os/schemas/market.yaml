@@ -1,0 +1,20 @@
+schema_version: "1.0"
+market_research:
+  task_id: ""
+  topic: ""
+  target_audience: ""
+  problem: ""
+  search_intent:
+    primary: ""
+    secondary: []
+  demand_signals: []
+  competitor_summary: []
+  content_gaps: []
+  product_opportunities: []
+  evidence: []
+  risks: []
+  recommendation:
+    decision: ""
+    priority: ""
+    reason: ""
+  next_action: ""

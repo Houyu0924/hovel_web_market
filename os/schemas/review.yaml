@@ -1,0 +1,14 @@
+schema_version: "1.0"
+review:
+  task_id: ""
+  target_file: ""
+  reviewer_role: ""
+  result: "revision-required"
+  blocking_issues: []
+  non_blocking_issues: []
+  verified_claims: []
+  unverified_claims: []
+  required_changes: []
+  recommended_changes: []
+  next_status: ""
+  reviewed_at: ""

@@ -1,0 +1,13 @@
+schema_version: "1.0"
+decision:
+  id: ""
+  date: ""
+  title: ""
+  status: "proposed"
+  background: ""
+  alternatives: []
+  selected_option: ""
+  reason: ""
+  impact: []
+  owner: ""
+  review_date: ""

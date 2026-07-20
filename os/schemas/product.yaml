@@ -1,0 +1,23 @@
+schema_version: "1.0"
+product:
+  product_id: ""
+  category: ""
+  brand: ""
+  name: ""
+  official_url: ""
+  affiliate_url: ""
+  checked_at: ""
+  specifications: {}
+  public_claims: []
+  evidence_sources: []
+  price:
+    amount: null
+    currency: "JPY"
+    checked_at: ""
+  verification:
+    purchased: false
+    tested: false
+    reviewer: ""
+  suitable_for: []
+  cautions: []
+  status: "candidate"
