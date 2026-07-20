@@ -1,0 +1,105 @@
+{
+  "task_id": "20260720-112401-会社員向け耳栓比較",
+  "topic": "会社員向け耳栓比較",
+  "status": "human-review",
+  "current_stage": "human-review",
+  "created_at": "2026-07-20T11:24:01+00:00",
+  "updated_at": "2026-07-20T11:24:01+00:00",
+  "artifacts": {
+    "market": "market.md",
+    "seo": "seo.md",
+    "investment": "investment.md",
+    "product": "product.md",
+    "writer": "draft.md",
+    "factcheck": "factcheck.md",
+    "editor": "editor.md"
+  },
+  "logs": [
+    {
+      "at": "2026-07-20T11:24:01+00:00",
+      "event": "workflow_created"
+    },
+    {
+      "at": "2026-07-20T11:24:01+00:00",
+      "event": "stage_started",
+      "stage": "market"
+    },
+    {
+      "at": "2026-07-20T11:24:01+00:00",
+      "event": "stage_completed",
+      "stage": "market",
+      "output": "market.md"
+    },
+    {
+      "at": "2026-07-20T11:24:01+00:00",
+      "event": "stage_started",
+      "stage": "seo"
+    },
+    {
+      "at": "2026-07-20T11:24:01+00:00",
+      "event": "stage_completed",
+      "stage": "seo",
+      "output": "seo.md"
+    },
+    {
+      "at": "2026-07-20T11:24:01+00:00",
+      "event": "stage_started",
+      "stage": "investment"
+    },
+    {
+      "at": "2026-07-20T11:24:01+00:00",
+      "event": "stage_completed",
+      "stage": "investment",
+      "output": "investment.md"
+    },
+    {
+      "at": "2026-07-20T11:24:01+00:00",
+      "event": "stage_started",
+      "stage": "product"
+    },
+    {
+      "at": "2026-07-20T11:24:01+00:00",
+      "event": "stage_completed",
+      "stage": "product",
+      "output": "product.md"
+    },
+    {
+      "at": "2026-07-20T11:24:01+00:00",
+      "event": "stage_started",
+      "stage": "writer"
+    },
+    {
+      "at": "2026-07-20T11:24:01+00:00",
+      "event": "stage_completed",
+      "stage": "writer",
+      "output": "draft.md"
+    },
+    {
+      "at": "2026-07-20T11:24:01+00:00",
+      "event": "stage_started",
+      "stage": "factcheck"
+    },
+    {
+      "at": "2026-07-20T11:24:01+00:00",
+      "event": "stage_completed",
+      "stage": "factcheck",
+      "output": "factcheck.md"
+    },
+    {
+      "at": "2026-07-20T11:24:01+00:00",
+      "event": "stage_started",
+      "stage": "editor"
+    },
+    {
+      "at": "2026-07-20T11:24:01+00:00",
+      "event": "stage_completed",
+      "stage": "editor",
+      "output": "editor.md"
+    },
+    {
+      "at": "2026-07-20T11:24:01+00:00",
+      "event": "workflow_completed",
+      "status": "human-review"
+    }
+  ]
+}

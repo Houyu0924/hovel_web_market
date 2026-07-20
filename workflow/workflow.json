@@ -1,0 +1,66 @@
+{
+  "version": "2.0",
+  "name": "hovel-article-workflow",
+  "final_status": "human-review",
+  "stages": [
+    {
+      "id": "market",
+      "agent": "market",
+      "output": "market.md",
+      "requires": []
+    },
+    {
+      "id": "seo",
+      "agent": "seo",
+      "output": "seo.md",
+      "requires": [
+        "market.md"
+      ]
+    },
+    {
+      "id": "investment",
+      "agent": "investment",
+      "output": "investment.md",
+      "requires": [
+        "market.md",
+        "seo.md"
+      ]
+    },
+    {
+      "id": "product",
+      "agent": "product",
+      "output": "product.md",
+      "requires": [
+        "investment.md"
+      ]
+    },
+    {
+      "id": "writer",
+      "agent": "writer",
+      "output": "draft.md",
+      "requires": [
+        "market.md",
+        "seo.md",
+        "investment.md",
+        "product.md"
+      ]
+    },
+    {
+      "id": "factcheck",
+      "agent": "factcheck",
+      "output": "factcheck.md",
+      "requires": [
+        "draft.md"
+      ]
+    },
+    {
+      "id": "editor",
+      "agent": "editor",
+      "output": "editor.md",
+      "requires": [
+        "draft.md",
+        "factcheck.md"
+      ]
+    }
+  ]
+}
