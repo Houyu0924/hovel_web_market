@@ -1,0 +1,5 @@
+id,keyword,article_type,category,priority,status,notes
+HOVEL-001,会社員 アイマスク おすすめ,comparison,BODY,S,review_existing,既存のアイマスク記事と重複確認
+HOVEL-002,昼寝 耳栓 おすすめ,comparison,WORK,A,idea,職場利用の条件整理
+HOVEL-003,出張 アイマスク おすすめ,comparison,WORK,A,idea,携帯性と洗濯性
+HOVEL-004,デスクライト 眠気,problem_solution,WORK,B,idea,医療表現に注意
