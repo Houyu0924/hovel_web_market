@@ -1,0 +1,5 @@
+product_id,product_name,brand,model_or_asin,price_band,use_case,shape,material,size,washing,official_source,amazon_url,rakuten_url,verified_at,tested_by_hovel,notes
+EM-001,綿混天竺携帯用アイマスク,無印良品,,low,昼休み・出張,flat,,,,,,,2026-07-20,false,公式仕様再確認
+EM-002,スリープマスク,テンピュール,,mid,自宅・ホテル,thick,,,,,,,2026-07-20,false,洗濯不可表示を再確認
+EM-003,3Dアイマスク,Suyamee,,low,自宅・仮眠,3d,,,,,,,2026-07-20,false,販売ページ仕様として管理
+EM-004,アイマスク,aimeve,,low,自宅・昼休み,3d,,,,,,,2026-07-20,false,ASIN固定が必要
