@@ -12,7 +12,7 @@ status: Draft
 article_type: informational
 primary_keyword: 睡眠 同じ時間に寝る 同じ時間に起きる
 search_intent: 睡眠時間を一定にする意味と実践方法を知りたい
- audience: 生活リズムが乱れやすい会社員
+audience: 生活リズムが乱れやすい会社員
 affiliate:
   amazon_id: hovelhealth-22
   products: []
@@ -204,6 +204,6 @@ updated: 2026-07-21
 
 [^1]: Phillips AJK, et al. Irregular sleep/wake patterns are associated with poorer academic performance and delayed circadian and sleep/wake timing. *Scientific Reports*. 2017;7:3216. https://doi.org/10.1038/s41598-017-03171-4
 [^2]: Windred DP, et al. Sleep regularity is a stronger predictor of mortality risk than sleep duration: A prospective cohort study. *Sleep*. 2024;47(1):zsad253. https://doi.org/10.1093/sleep/zsad253
-[^3]: Kuno E, et al. Irregular sleep and all-cause mortality: A large prospective cohort study. *Sleep Health*. 2023;9(1):100-106. https://doi.org/10.1016/j.sleh.2022.09.011
+[^3]: Kuno E, et al. Irregular sleep and all-cause mortality: A large prospective cohort study. *Sleep Health*. 2022;8(6):678-683. https://doi.org/10.1016/j.sleh.2022.08.010
 [^4]: Liu J, et al. Sleep regularity is associated with cognitive function and shows an inverted U-shaped relationship with serum brain-derived neurotrophic factor. *Sleep Medicine*. 2025;134:106688. https://doi.org/10.1016/j.sleep.2025.106688
 [^5]: Watson NF, et al. Recommended Amount of Sleep for a Healthy Adult: A Joint Consensus Recommendation of the American Academy of Sleep Medicine and Sleep Research Society. *Sleep*. 2015;38(6):843-844. https://doi.org/10.5665/sleep.4716
