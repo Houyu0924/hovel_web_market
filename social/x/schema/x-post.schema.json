@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HOVEL X Post Batch",
+  "type": "object",
+  "required": ["article", "generated_at", "posts"],
+  "properties": {
+    "article": {
+      "type": "object",
+      "required": ["title", "slug", "category"],
+      "properties": {
+        "title": {"type": "string", "minLength": 1},
+        "slug": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+        "url": {"type": "string"},
+        "category": {"enum": ["WORK", "BODY", "STYLE", "HABIT"]}
+      },
+      "additionalProperties": false
+    },
+    "generated_at": {"type": "string", "format": "date-time"},
+    "reviewed_at": {"type": ["string", "null"], "format": "date-time"},
+    "reviewer": {"type": ["string", "null"]},
+    "posts": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "required": ["type", "text", "include_url", "hashtags", "status"],
+        "properties": {
+          "type": {"enum": ["announcement", "conclusion", "evidence", "action", "repost"]},
+          "text": {"type": "string", "minLength": 1, "maxLength": 140},
+          "include_url": {"type": "boolean"},
+          "hashtags": {
+            "type": "array",
+            "maxItems": 2,
+            "items": {"type": "string", "pattern": "^#"}
+          },
+          "status": {"enum": ["draft", "approved", "scheduled", "published", "rejected"]},
+          "scheduled_at": {"type": ["string", "null"], "format": "date-time"},
+          "published_at": {"type": ["string", "null"], "format": "date-time"},
+          "x_post_id": {"type": ["string", "null"]},
+          "review_note": {"type": ["string", "null"]}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
