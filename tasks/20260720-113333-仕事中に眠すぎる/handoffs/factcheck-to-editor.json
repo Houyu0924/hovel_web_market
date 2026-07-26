@@ -1,0 +1,7 @@
+{
+  "task_id": "20260720-113333-仕事中に眠すぎる",
+  "from_stage": "factcheck",
+  "to_stage": "editor",
+  "output_file": "factcheck.md",
+  "created_at": "2026-07-20T11:33:33+00:00"
+}
