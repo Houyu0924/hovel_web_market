@@ -1,0 +1,77 @@
+name: Generate X Drafts
+
+on:
+  workflow_dispatch:
+    inputs:
+      article_path:
+        description: "Path to the source article Markdown file"
+        required: true
+        default: "articles/sample.md"
+  push:
+    paths:
+      - "articles/**/*.md"
+      - "content/**/*.md"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  generate-x-drafts:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Resolve source article
+        id: source
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            ARTICLE_PATH="${{ inputs.article_path }}"
+          else
+            ARTICLE_PATH=$(git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" | grep -E '^(articles|content)/.*\.md$' | head -n 1 || true)
+          fi
+
+          if [ -z "$ARTICLE_PATH" ]; then
+            echo "No Markdown article found."
+            exit 0
+          fi
+
+          if [ ! -f "$ARTICLE_PATH" ]; then
+            echo "Article not found: $ARTICLE_PATH"
+            exit 1
+          fi
+
+          echo "article_path=$ARTICLE_PATH" >> "$GITHUB_OUTPUT"
+          echo "slug=$(basename "$ARTICLE_PATH" .md)" >> "$GITHUB_OUTPUT"
+
+      - name: Generate review package
+        if: steps.source.outputs.article_path != ''
+        run: |
+          python scripts/generate_x_review_package.py \
+            "${{ steps.source.outputs.article_path }}" \
+            "social/x/review-packages/${{ steps.source.outputs.slug }}.md"
+
+      - name: Commit generated review package
+        if: steps.source.outputs.article_path != ''
+        shell: bash
+        run: |
+          if git diff --quiet -- social/x/review-packages; then
+            echo "No generated changes."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add social/x/review-packages
+          git commit -m "chore: generate X draft review package"
+          git push
