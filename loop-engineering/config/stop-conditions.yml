@@ -1,0 +1,55 @@
+version: 0.1
+global_stop_conditions:
+  - id: repeated_failure
+    condition: "same_gate_failed_count >= 3"
+    action: escalate_to_owner
+  - id: unsupported_claim
+    condition: "required_evidence_missing == true"
+    action: stop_and_request_source
+  - id: health_risk
+    condition: "possible_health_harm == true"
+    action: stop_and_require_human_review
+  - id: privacy_risk
+    condition: "personal_or_sensitive_data_detected == true"
+    action: stop_and_remove_data
+  - id: duplicate_content
+    condition: "materially_similar_content_exists == true"
+    action: merge_or_cancel
+  - id: budget_limit
+    condition: "weekly_external_cost_jpy > 0"
+    action: stop_unless_owner_approved
+  - id: vanity_growth
+    condition: "output_volume_up_and_business_metrics_down_for_2_cycles == true"
+    action: reduce_output_and_review_strategy
+loop_specific:
+  x_post:
+    max_revisions: 3
+    stop_when:
+      - "factual_basis_cannot_be_verified"
+      - "post_requires_fake_experience"
+      - "brand_voice_conflict_remains_after_3_revisions"
+  article:
+    max_revisions: 3
+    stop_when:
+      - "medical_conclusion_requires_professional_judgment"
+      - "primary_source_unavailable"
+      - "search_intent_overlaps_existing_article"
+  product_review:
+    max_revisions: 2
+    stop_when:
+      - "product_variant_uncertain"
+      - "adverse_reaction_occurs"
+      - "usage_conditions_not_recorded"
+  weekly_review:
+    max_revisions: 2
+    stop_when:
+      - "metrics_periods_are_incomparable"
+      - "missing_core_metrics"
+escalation_record_required:
+  fields:
+    - date
+    - loop
+    - failed_condition
+    - evidence
+    - attempted_fixes
+    - owner_decision
