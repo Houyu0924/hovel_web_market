@@ -1,0 +1,49 @@
+version: 0.1
+article_gate:
+  required:
+    - problem_is_single_and_specific
+    - conclusion_is_visible_early
+    - evidence_and_hovel_hypothesis_are_separated
+    - claims_are_supported_or_clearly_labeled
+    - limitations_and_cautions_are_present
+    - duplication_check_completed
+    - internal_links_count_gte_2
+    - cta_is_single
+    - target_metric_is_defined
+  human_approval_required:
+    - medical_or_health_claim
+    - product_recommendation
+    - affiliate_link_placement
+    - publication
+x_post_gate:
+  required:
+    - one_message_per_post
+    - natural_x_language
+    - no_fake_personal_experience
+    - no_unverifiable_claim
+    - article_link_optional_not_mandatory
+    - style_variant_is_recorded
+  style_variants:
+    - office_worker_observation
+    - hovel_lab_log
+    - evidence_plus_action
+product_review_gate:
+  required:
+    - product_and_variant_identified
+    - purchase_or_source_recorded
+    - evaluation_conditions_recorded
+    - subjective_and_objective_observations_separated
+    - adverse_reaction_check_recorded
+    - affiliate_disclosure_present_when_needed
+  verdicts:
+    - recommended
+    - conditionally_recommended
+    - not_recommended
+    - insufficient_evidence
+weekly_review_gate:
+  required:
+    - data_period_recorded
+    - top_and_bottom_content_identified
+    - hypothesis_compared_with_result
+    - next_action_is_continue_improve_or_stop
+    - owner_approval_recorded
