@@ -1,2 +1,2 @@
-week,start_date,end_date,note_pv,note_likes,note_comments,note_articles_published,x_followers,x_impressions,x_likes,x_reposts,x_replies,x_profile_visits,x_url_clicks,amazon_clicks,amazon_orders,amazon_revenue_jpy,gsc_clicks,gsc_impressions,gsc_ctr_percent,gsc_average_position,hours_invested,notes
-2026-W31,2026-07-27,2026-08-02,127,9,0,18,17,,,,,,,2,0,0,,,,,,Initial baseline; fill missing X and Search Console metrics before processing
+week,start_date,end_date,note_pv,note_likes,note_comments,note_articles_published,x_followers,x_impressions,x_likes,x_reposts,x_replies,x_profile_visits,x_url_clicks,amazon_clicks,amazon_orders,amazon_revenue_jpy,gsc_clicks,gsc_impressions,gsc_ctr_percent,gsc_average_position,notes
+2026-W31,2026-07-27,2026-08-02,127,9,0,18,17,,,,,,,2,0,0,,,,,Initial baseline; automated collectors should fill X and Search Console metrics
