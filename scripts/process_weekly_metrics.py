@@ -53,7 +53,6 @@ NUMERIC = [
     "gsc_impressions",
     "gsc_ctr_percent",
     "gsc_average_position",
-    "hours_invested",
 ]
 
 
@@ -143,7 +142,7 @@ def main() -> int:
 
         print(f"Processed {row['week']} successfully.")
         return 0
-    except Exception as exc:  # concise CLI failure for GitHub Actions
+    except Exception as exc:
         print(f"ERROR: {exc}", file=sys.stderr)
         return 1
 
