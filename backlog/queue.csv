@@ -1,0 +1,9 @@
+task_id,week,category,priority,title,owner,status,expected_effect,estimated_hours,cash_cost_yen,completion_criteria,blocked_by,due_date,next_action
+HOVEL-001,2026-W32,System,P1,直近7日間のnote・X・Amazonデータを入力する,Data Agent,Todo,週次判断に必要な基礎データを整備,0.5,0,主要指標の欠損がなくCSV検証を通過する,,2026-08-02,管理画面から数値を転記する
+HOVEL-002,2026-W32,System,P1,初回週次レビューを作成する,Analyst Agent,Blocked,次週の投資優先順位を決定,0.5,0,Keep・Improve・Stopと翌週P1を最大3件提示,HOVEL-001,2026-08-02,HOVEL-001完了後に分析を実行する
+HOVEL-003,2026-W32,Product,P1,オールドスパイス初日レビューを記録する,Product Agent,Todo,実体験ベースのレビュー資産を作る,0.5,0,香り・使用感・職場適性・注意点を記録する,,2026-08-03,使用条件と初回所感を入力する
+HOVEL-004,2026-W32,Growth,P1,X投稿の3文体テストを開始する,SNS Agent,Todo,HOVELらしい勝ち文体を特定,1.5,0,3文体を各2投稿以上実施し反応指標を記録する,,2026-08-08,投稿候補6本を作成する
+HOVEL-005,2026-W32,Content,P2,オーラルケア記事3本を公開する,Content Agent,Todo,清潔感クラスターを強化,4.0,0,3記事が品質ゲートを通過し公開される,,2026-08-08,公開順と内部リンクを決める
+HOVEL-006,2026-W32,Revenue,P2,既存記事の商品CTAを監査する,CEO Agent,Todo,Amazonクリック改善機会を特定,1.0,0,対象記事と改善案を3件以上記録する,HOVEL-001,2026-08-08,クリック発生記事を特定する
+HOVEL-007,2026-W32,System,P2,ブラウザデータ収集エージェントの手順を定義する,Data Agent,Todo,将来の無料自動収集に備える,2.0,0,note・X・Amazon・Search Consoleの取得手順と停止条件が文書化される,,2026-08-09,対象画面と取得項目を棚卸しする
+HOVEL-008,2026-W32,Research,P3,清潔感カテゴリの競合記事を調査する,Research Agent,Parked,次の商品・記事候補を発見,2.0,0,競合10件と差別化仮説3件を記録する,HOVEL-002,2026-08-15,週次レビュー後に実施可否を判断する
