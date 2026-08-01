@@ -1,0 +1,32 @@
+version: 0.1
+period:
+  start: 2026-08-03
+  end: 2026-08-09
+north_star:
+  objective: "会社員の悩みを、検証可能な記事・SNS投稿・商品レビューへ変換し、需要と購買行動を学習する"
+  primary_metric: associate_clicks
+baselines:
+  note_monthly_views: 127
+  note_monthly_likes: 9
+  note_like_rate: 0.071
+  x_followers: 17
+  associate_monthly_clicks: 2
+weekly_targets:
+  note_views: 60
+  note_likes: 4
+  x_posts: 14
+  x_value_replies: 35
+  x_followers_end: 25
+  associate_clicks: 4
+  new_articles: 3
+  reviewed_products_started: 1
+  completed_weekly_review: true
+portfolio_allocation:
+  cleanliness_and_odour: 0.60
+  work_performance_and_ai: 0.25
+  sleep_and_recovery: 0.15
+success_definition:
+  - "オールドスパイスの検証を開始し、初日データを保存する"
+  - "X投稿14本のうち、3つの文体を比較する"
+  - "公開後データを週次レビューへ入力する"
+  - "翌週に継続・改善・停止する施策を決定する"
