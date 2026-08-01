@@ -1,0 +1,38 @@
+name: Process HOVEL Weekly Metrics
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "data-collector/inbox/weekly-input.csv"
+      - "scripts/process_weekly_metrics.py"
+
+permissions:
+  contents: write
+
+jobs:
+  process:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Process weekly metrics
+        run: python scripts/process_weekly_metrics.py
+
+      - name: Commit normalized metrics
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "No generated changes."
+            exit 0
+          fi
+          git commit -m "Update normalized weekly metrics"
+          git push
