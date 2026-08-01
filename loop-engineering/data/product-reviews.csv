@@ -1,0 +1,3 @@
+date,product,variant,source,purchase_price_jpy,test_day,use_case,weather_or_environment,amount_used,scent_strength_1_5,scent_duration_hours,cleanliness_feel_1_5,skin_or_scalp_reaction,office_suitability_1_5,repurchase_intent_1_5,affiliate_clicks,verdict,evidence_status,next_action,notes
+2026-08-03,Old Spice,rinse-in-shampoo,purchased,,,,,,,,,,,,,insufficient_evidence,not_started,start_test,"初日・7日目・30日目で記録"
+2026-08-03,Old Spice,body-wash,purchased,,,,,,,,,,,,,insufficient_evidence,not_started,start_test,"初日・7日目・30日目で記録"
