@@ -38,6 +38,11 @@ def normalize(text: str) -> str:
     return " ".join(text.replace("\u3000", " ").split())
 
 
+def split_tokens(text: str) -> list[str]:
+    """Split row text on line breaks and tabs without losing metric boundaries."""
+    return [normalize(token) for token in re.split(r"[\n\t]+", text) if normalize(token)]
+
+
 def extract_candidates(page) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
     """Return article rows and diagnostics using several DOM heuristics."""
     diagnostics: list[dict[str, Any]] = []
@@ -61,47 +66,42 @@ def extract_candidates(page) -> tuple[list[dict[str, Any]], list[dict[str, Any]]
         for index in range(count):
             item = locators.nth(index)
             try:
-                text = normalize(item.inner_text(timeout=500))
+                raw_text = item.inner_text(timeout=500)
             except Exception:
                 continue
 
-            if not text or len(text) > 700:
+            if not raw_text or len(raw_text) > 700:
                 continue
 
-            lines = [normalize(line) for line in text.splitlines() if normalize(line)]
-            numbers = [to_int(line) for line in lines]
+            tokens = split_tokens(raw_text)
+            numbers = [to_int(token) for token in tokens]
             numbers = [number for number in numbers if number is not None]
 
-            # An article record normally contains a title and three metrics:
-            # views, comments, likes. Some layouts omit a visible zero, so allow
-            # two values and leave the missing metric blank.
-            non_numbers = [line for line in lines if to_int(line) is None]
+            non_numbers = [token for token in tokens if to_int(token) is None]
             title_candidates = [
-                line
-                for line in non_numbers
-                if 4 <= len(line) <= 140
-                and line not in {"ビュー", "コメント", "スキ", "全期間", "週", "月", "年"}
-                and not re.fullmatch(r"\d{4}[./-]\d{1,2}[./-]\d{1,2}.*", line)
+                token
+                for token in non_numbers
+                if 4 <= len(token) <= 140
+                and token not in {"ビュー", "コメント", "スキ", "全期間", "週", "月", "年"}
+                and not re.fullmatch(r"\d{4}[./-]\d{1,2}[./-]\d{1,2}.*", token)
             ]
 
-            if len(numbers) < 2 or not title_candidates:
+            if len(numbers) < 3 or not title_candidates:
                 continue
 
             title = max(title_candidates, key=len)
             if title in seen_titles:
                 continue
 
-            values = numbers[-3:]
-            while len(values) < 3:
-                values.append(None)
+            views, comments, likes = numbers[-3:]
 
             rows.append(
                 {
                     "captured_at": datetime.now().isoformat(timespec="seconds"),
                     "title": title,
-                    "views": values[0],
-                    "comments": values[1],
-                    "likes": values[2],
+                    "views": views,
+                    "comments": comments,
+                    "likes": likes,
                     "source_selector": selector,
                 }
             )
