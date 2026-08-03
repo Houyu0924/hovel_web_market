@@ -1,0 +1,28 @@
+{
+  "name": "hovel_web_market",
+  "version": "1.0.0",
+  "description": "HOVEL向けアフィリエイト記事の企画・制作・審査・公開管理を標準化する無料運用基盤です。",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Houyu0924/hovel_web_market.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Houyu0924/hovel_web_market/issues"
+  },
+  "homepage": "https://github.com/Houyu0924/hovel_web_market#readme",
+  "devDependencies": {
+    "playwright": "^1.62.1"
+  }
+}

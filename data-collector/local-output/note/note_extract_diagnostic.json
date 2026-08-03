@@ -1,0 +1,55 @@
+{
+  "captured_at": "2026-08-02T15:34:01",
+  "url": "https://note.com/sitesettings/stats",
+  "title": "ダッシュボード｜note",
+  "article_rows_found": 12,
+  "diagnostics": [
+    {
+      "selector": "table tbody tr",
+      "elements_scanned": 12,
+      "rows_matched": 12
+    }
+  ],
+  "sample_rows": [
+    {
+      "captured_at": "2026-08-02T15:34:01",
+      "title": "オールドスパイスは日本人にも合う？香り・種類・選び方を解説",
+      "views": 7,
+      "comments": 0,
+      "likes": 0,
+      "source_selector": "table tbody tr"
+    },
+    {
+      "captured_at": "2026-08-02T15:34:01",
+      "title": "会社員向け耳栓おすすめ3選｜仕事に集中したい人の選び方",
+      "views": 6,
+      "comments": 0,
+      "likes": 0,
+      "source_selector": "table tbody tr"
+    },
+    {
+      "captured_at": "2026-08-02T15:34:01",
+      "title": "夏の通勤向け速乾インナーの選び方｜男性会社員向けおすすめ商品を比較",
+      "views": 6,
+      "comments": 0,
+      "likes": 0,
+      "source_selector": "table tbody tr"
+    },
+    {
+      "captured_at": "2026-08-02T15:34:01",
+      "title": "朝シャワーと夜シャワーはどっちがいい？会社員の睡眠・清潔感・目覚めを比較",
+      "views": 4,
+      "comments": 0,
+      "likes": 0,
+      "source_selector": "table tbody tr"
+    },
+    {
+      "captured_at": "2026-08-02T15:34:01",
+      "title": "汗拭きシートおすすめ｜会社員が営業・通勤で使いやすい商品を比較",
+      "views": 4,
+      "comments": 0,
+      "likes": 0,
+      "source_selector": "table tbody tr"
+    }
+  ]
+}
