@@ -24,4 +24,4 @@
 {{cannibalization_risks}}
 
 ## Agent Role
-seo
+market

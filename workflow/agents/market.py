@@ -1,5 +1,23 @@
 from .base import BaseAgent
+
 class MarketAgent(BaseAgent):
-    name="market"
-    def run(self,topic,inputs):
-        return '# 市場調査: {topic}\n\n## 想定読者\n25〜30代の男性会社員。\n\n## 読者課題\n- 何から確認すべきか分からない\n- 実行可能な判断基準が欲しい\n- 商品紹介より先に問題整理を求めている\n\n## 判断\n検索需要、競合、既存記事との重複を確認することを条件に次工程へ進める。'.format(topic=topic)
+    name = "market"
+
+    def run(self, topic, inputs):
+        return f"""# 市場調査: {topic}
+
+## Knowledge Base参照
+{inputs.get("_knowledge_context", "- 該当なし")}
+
+## 既存記事
+{inputs.get("_related_articles", "- 該当なし")}
+
+## 想定読者
+25〜30代の男性会社員。
+
+## 調査仮説
+読者は原因、判断基準、具体策を求める。購入導線は問題解決に必要な場合のみ設計する。
+
+## 次工程への条件
+外部検索による検索需要・競合・最新情報の確認が必要。
+"""
