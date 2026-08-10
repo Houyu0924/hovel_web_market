@@ -1,5 +1,31 @@
 from .base import BaseAgent
+
 class SeoAgent(BaseAgent):
-    name="seo"
-    def run(self,topic,inputs):
-        return '# SEO設計: {topic}\n\n## Primary Keyword\n{topic}\n\n## Proposed Title\n{topic}｜会社員が最初に確認すべきこと\n\n## Search Intent\n原因、判断基準、具体策を知りたい。\n\n## 構成\n1. 結論\n2. 最初に確認すること\n3. 原因または選択基準\n4. 今日からの対策\n5. 注意点'.format(topic=topic)
+    name = "seo"
+
+    def run(self, topic, inputs):
+        return f"""# SEO設計: {topic}
+
+## Primary Keyword
+{topic}
+
+## Proposed Title
+{topic}｜会社員が最初に確認すべきこと
+
+## カニバリゼーション候補
+{inputs.get("_cannibalization_risks", "- 該当なし")}
+
+## 内部リンク候補
+{inputs.get("_internal_links", "- 該当なし")}
+
+## 構成
+1. 結論
+2. 状況の切り分け
+3. 原因・比較軸
+4. 実行手順
+5. 注意点
+6. 関連記事
+
+## 判定
+重複リスクがある場合は、新規記事ではなく既存記事更新も検討する。
+"""
